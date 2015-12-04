@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE7D3FAC-8F40-4925-A09B-99607691E49C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSTrans</RootNamespace>
+    <AssemblyName>SSTrans</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\SSCRM\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditDB.cs" />
+    <Compile Include="DealerInfo.cs" />
+    <Compile Include="ExcelDB.cs" />
+    <Compile Include="FixedAssetsDB.cs" />
+    <Compile Include="IndentDB.cs" />
+    <Compile Include="DnkDetailsDB.cs" />
+    <Compile Include="HRInfo.cs" />
+    <Compile Include="InvoiceDB.cs" />
+    <Compile Include="LegalInfoDB.cs" />
+    <Compile Include="OrderDB.cs" />
+    <Compile Include="ProductUnitDB.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceDB.cs" />
+    <Compile Include="ServiceDeptDB.cs" />
+    <Compile Include="StationaryDB.cs" />
+    <Compile Include="StockPointDB.cs" />
+    <Compile Include="StockTransferTrn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSAdmin\SSAdmin.csproj">
+      <Project>{7D0E91B6-7336-4FDD-9BB1-03137BE519B5}</Project>
+      <Name>SSAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSCRMDB\SSCRMDB.csproj">
+      <Project>{25D7E564-F1F1-49EB-A8C2-B532888B1D76}</Project>
+      <Name>SSCRMDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

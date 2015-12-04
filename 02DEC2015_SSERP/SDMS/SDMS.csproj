@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B43710D-1978-4C4D-9DFC-17699ADCF29A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SDMS</RootNamespace>
+    <AssemblyName>ShanmukhaDMS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>shanmukha_logo.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SignManifests>false</SignManifests>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>http://localhost/SSCRM/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SSCRMDB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\SSCRMDB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AgingIntervals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AgingIntervals.designer.cs">
+      <DependentUpon>AgingIntervals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\UserTask.designer.cs">
+      <DependentUpon>UserTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerSales\DealerInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerSales\DealerInvoice.designer.cs">
+      <DependentUpon>DealerInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerSales\DealerMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerSales\DealerMapping.designer.cs">
+      <DependentUpon>DealerMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerSales\SalesCreditNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerSales\SalesCreditNote.designer.cs">
+      <DependentUpon>SalesCreditNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\TaskMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\TaskMaster.designer.cs">
+      <DependentUpon>TaskMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\BankBillRecievedDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\BankBillRecievedDetails.designer.cs">
+      <DependentUpon>BankBillRecievedDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\BankPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\BankPayment.designer.cs">
+      <DependentUpon>BankPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\BankPaymentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\BankPaymentDetails.designer.cs">
+      <DependentUpon>BankPaymentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\BankRecieptVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\BankRecieptVoucher.designer.cs">
+      <DependentUpon>BankRecieptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\CashBillReceivedDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\CashBillReceivedDetails.designer.cs">
+      <DependentUpon>CashBillReceivedDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\CashPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\CashPayment.designer.cs">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\CashPaymentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\CashPaymentDetails.designer.cs">
+      <DependentUpon>CashPaymentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\CashReceiptVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\CashReceiptVoucher.designer.cs">
+      <DependentUpon>CashReceiptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\JournalVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\JournalVoucher.designer.cs">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\JournalVoucherDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\JournalVoucherDetails.designer.cs">
+      <DependentUpon>JournalVoucherDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DealerReports\DL_INV_REPORT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DL_INV_REPORT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\DL_REP_INVOICE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DL_REP_INVOICE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\FAOutstanding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\FAOutstanding.designer.cs">
+      <DependentUpon>FAOutstanding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reciepts\ReceiptVoucherList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reciepts\ReceiptVoucherList.designer.cs">
+      <DependentUpon>ReceiptVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DealerReports\DealersSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\DealersSearch.designer.cs">
+      <DependentUpon>DealersSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DealerReports\SaleRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\SaleRegister.designer.cs">
+      <DependentUpon>SaleRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DealerReports\SATL_OS_DETL_Report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SATL_OS_DETL_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\SATL_OS_DETL_Report_ModelTwo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SATL_OS_DETL_Report_ModelTwo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\SATL_SALREG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SATL_SALREG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DealerReports\SATL_SALREG_SUMM_REP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SATL_SALREG_SUMM_REP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PUReports\SSCRM_REP_PU_ALLDCDCST_FOR_DEST.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSCRM_REP_PU_ALLDCDCST_FOR_DEST.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PUReports\SSCRM_REP_PU_DCST_REG_DETL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSCRM_REP_PU_DCST_REG_DETL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PUReports\SSCRM_REP_PU_FINISHED_GOODS_REG_DETL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSCRM_REP_PU_FINISHED_GOODS_REG_DETL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptFiles\Product_Codes_Report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Product_Codes_Report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptFiles\SSCRM_REP_SALES_REG_DETL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSCRM_REP_SALES_REG_DETL.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RptFiles\SSCRM_REP_SALES_REG_DETLX.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SSCRM_REP_SALES_REG_DETLX.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales Reports\DL_REP_ORDER_BOOKING_REG.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DL_REP_ORDER_BOOKING_REG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Masters\AddVillage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\AddVillage.Designer.cs">
+      <DependentUpon>AddVillage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\BankDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\BankDetails.Designer.cs">
+      <DependentUpon>BankDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\Bussiness Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\Bussiness Detail.Designer.cs">
+      <DependentUpon>Bussiness Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\BussinessVehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\BussinessVehicles.Designer.cs">
+      <DependentUpon>BussinessVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\DealarApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\DealarApplicationForm.Designer.cs">
+      <DependentUpon>DealarApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\FixedAssets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\FixedAssets.Designer.cs">
+      <DependentUpon>FixedAssets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\OtherDealerships.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\OtherDealerships.Designer.cs">
+      <DependentUpon>OtherDealerships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\Partners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\Partners.Designer.cs">
+      <DependentUpon>Partners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\PrevTurnOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\PrevTurnOver.Designer.cs">
+      <DependentUpon>PrevTurnOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\SecurityCheq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\SecurityCheq.Designer.cs">
+      <DependentUpon>SecurityCheq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer Application\Territory Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dealer Application\Territory Details.Designer.cs">
+      <DependentUpon>Territory Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerSales\OrderBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerSales\OrderBookingForm.designer.cs">
+      <DependentUpon>OrderBookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DealerSales\ProductSearchAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DealerSales\ProductSearchAll.designer.cs">
+      <DependentUpon>ProductSearchAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DealerReports\DL_APPL_EDITLIST.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DL_APPL_EDITLIST.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service References\SSCRMAndrDB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TriStateTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="App_Code\General.cs" />
+    <Compile Include="App_Code\Grouper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="App_Code\UtilityFunctions.cs" />
+    <Compile Include="App_Code\UtilityLibrary.cs" />
+    <Compile Include="Controls\DataBoundTreeView.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Controls\MultiColumnComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ECodeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ECodeCtrl.designer.cs">
+      <DependentUpon>ECodeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\InvoiceTemplateProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\InvoiceTemplateProducts.Designer.cs">
+      <DependentUpon>InvoiceTemplateProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\ProductMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\ProductMaster.designer.cs">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddressCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressCtrl.Designer.cs">
+      <DependentUpon>AddressCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent.designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\AgingIntervals.resx">
+      <DependentUpon>AgingIntervals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UserTask.resx">
+      <DependentUpon>UserTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerSales\DealerInvoice.resx">
+      <DependentUpon>DealerInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerSales\DealerMapping.resx">
+      <DependentUpon>DealerMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerSales\SalesCreditNote.resx">
+      <DependentUpon>SalesCreditNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\TaskMaster.resx">
+      <DependentUpon>TaskMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\BankBillRecievedDetails.resx">
+      <DependentUpon>BankBillRecievedDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\BankPayment.resx">
+      <DependentUpon>BankPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\BankPaymentDetails.resx">
+      <DependentUpon>BankPaymentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\BankRecieptVoucher.resx">
+      <DependentUpon>BankRecieptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\CashBillReceivedDetails.resx">
+      <DependentUpon>CashBillReceivedDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\CashPayment.resx">
+      <DependentUpon>CashPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\CashPaymentDetails.resx">
+      <DependentUpon>CashPaymentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\CashReceiptVoucher.resx">
+      <DependentUpon>CashReceiptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\JournalVoucher.resx">
+      <DependentUpon>JournalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\JournalVoucherDetails.resx">
+      <DependentUpon>JournalVoucherDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\DL_INV_REPORT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DL_INV_REPORT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\DL_REP_INVOICE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DL_REP_INVOICE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\FAOutstanding.resx">
+      <DependentUpon>FAOutstanding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reciepts\ReceiptVoucherList.resx">
+      <DependentUpon>ReceiptVoucherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\DealersSearch.resx">
+      <DependentUpon>DealersSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\SaleRegister.resx">
+      <DependentUpon>SaleRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\SATL_OS_DETL_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SATL_OS_DETL_Report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\SATL_OS_DETL_Report_ModelTwo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SATL_OS_DETL_Report_ModelTwo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\SATL_SALREG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SATL_SALREG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\SATL_SALREG_SUMM_REP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SATL_SALREG_SUMM_REP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PUReports\SSCRM_REP_PU_ALLDCDCST_FOR_DEST.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SSCRM_REP_PU_ALLDCDCST_FOR_DEST.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PUReports\SSCRM_REP_PU_DCST_REG_DETL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SSCRM_REP_PU_DCST_REG_DETL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PUReports\SSCRM_REP_PU_FINISHED_GOODS_REG_DETL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SSCRM_REP_PU_FINISHED_GOODS_REG_DETL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptFiles\Product_Codes_Report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Product_Codes_Report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptFiles\SSCRM_REP_SALES_REG_DETL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SSCRM_REP_SALES_REG_DETL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RptFiles\SSCRM_REP_SALES_REG_DETLX.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SSCRM_REP_SALES_REG_DETLX.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales Reports\DL_REP_ORDER_BOOKING_REG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DL_REP_ORDER_BOOKING_REG.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\AddVillage.resx">
+      <DependentUpon>AddVillage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\BankDetails.resx">
+      <DependentUpon>BankDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\Bussiness Detail.resx">
+      <DependentUpon>Bussiness Detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\BussinessVehicles.resx">
+      <DependentUpon>BussinessVehicles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\DealarApplicationForm.resx">
+      <DependentUpon>DealarApplicationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\FixedAssets.resx">
+      <DependentUpon>FixedAssets.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\OtherDealerships.resx">
+      <DependentUpon>OtherDealerships.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\Partners.resx">
+      <DependentUpon>Partners.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\PrevTurnOver.resx">
+      <DependentUpon>PrevTurnOver.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\SecurityCheq.resx">
+      <DependentUpon>SecurityCheq.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dealer Application\Territory Details.resx">
+      <DependentUpon>Territory Details.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerSales\OrderBookingForm.resx">
+      <DependentUpon>OrderBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DealerSales\ProductSearchAll.resx">
+      <DependentUpon>ProductSearchAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Code\Grouper.resx">
+      <DependentUpon>Grouper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DataBoundTreeView.resx">
+      <DependentUpon>DataBoundTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MultiColumnComboBox.resx">
+      <DependentUpon>MultiColumnComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ECodeCtrl.resx">
+      <DependentUpon>ECodeCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\InvoiceTemplateProducts.resx">
+      <DependentUpon>InvoiceTemplateProducts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\ProductMaster.resx">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\VillageMaster.resx">
+      <DependentUpon>VillageMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddressCtrl.resx">
+      <DependentUpon>AddressCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DealerReports\DL_APPL_EDITLIST.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DL_APPL_EDITLIST.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportViewer.resx">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\VillageSearch.resx">
+      <DependentUpon>VillageSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\ReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportViewer.designer.cs">
+      <DependentUpon>ReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\VillageMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\VillageMaster.Designer.cs">
+      <DependentUpon>VillageMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\VillageSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\VillageSearch.designer.cs">
+      <DependentUpon>VillageSearch.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\2lblue2.bmp" />
+    <Content Include="Images\center.jpg" />
+    <Content Include="Images\login1.jpg" />
+    <Content Include="Images\LogKey.png" />
+    <Content Include="Images\LOGO1.ico" />
+    <Content Include="Images\LOGO2.ico" />
+    <Content Include="Images\search.gif" />
+    <Content Include="Images\topbg3.jpg" />
+    <Content Include="LOGO1.ico" />
+    <Content Include="LOGO2.ico" />
+    <Content Include="shanmukha_logo.ico" />
+    <None Include="Resources\arrows_back_forward.png" />
+    <None Include="Resources\print_icon2.gif" />
+    <None Include="Resources\print_icon1.gif" />
+    <None Include="Resources\print_icon.gif" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Service References\SSCRMAndrDB\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SSCRMAndrDB\configuration.svcinfo" />
+    <None Include="Service References\SSCRMAndrDB\configuration91.svcinfo" />
+    <None Include="Service References\SSCRMAndrDB\SSCRMDB_Andr.disco" />
+    <None Include="Resources\ic_zoom.png" />
+    <None Include="Resources\ic_upload.png" />
+    <None Include="Resources\ic_up_circle.png" />
+    <None Include="Resources\ic_settings.png" />
+    <None Include="Resources\ic_right.png" />
+    <None Include="Resources\ic_refresh.png" />
+    <None Include="Resources\ic_print.png" />
+    <None Include="Resources\ic_power.png" />
+    <None Include="Resources\ic_lock.png" />
+    <None Include="Resources\ic_left.png" />
+    <None Include="Resources\ic_favorite.png" />
+    <None Include="Resources\ic_edit.png" />
+    <None Include="Resources\ic_download.png" />
+    <None Include="Resources\ic_delete.png" />
+    <None Include="Resources\ic_cancel.png" />
+    <None Include="Resources\ic_add.png" />
+    <None Include="Resources\actions-edit.png" />
+    <None Include="Resources\actions-delete.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\confirmation.png" />
+    <None Include="Resources\menu-user.png" />
+    <None Include="Resources\menu-settings-over.png" />
+    <None Include="Resources\menu-settings.png" />
+    <None Include="Resources\menu-logoff-over.png" />
+    <None Include="Resources\menu-logoff.png" />
+    <None Include="Resources\menu-email-special.png" />
+    <None Include="Resources\menu-email-over.png" />
+    <None Include="Resources\menu-email.png" />
+    <None Include="Resources\tab-dashboard.png" />
+    <None Include="Resources\separator-bg.png" />
+    <None Include="Resources\menu-indicator.png" />
+    <None Include="Resources\menu-dark-indicator.png" />
+    <None Include="Resources\login-icon.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\Up.PNG" />
+    <None Include="Resources\down.PNG" />
+    <None Include="Resources\nomale.jpg" />
+    <None Include="Resources\Edit.jpg" />
+    <None Include="Resources\Del.jpg" />
+    <None Include="Service References\SSCRMAndrDB\SSCRMDB_Andr.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSAdmin\SSAdmin.csproj">
+      <Project>{7D0E91B6-7336-4FDD-9BB1-03137BE519B5}</Project>
+      <Name>SSAdmin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSCRM\SSCRM.csproj">
+      <Project>{AD61A4F8-1E08-4EAB-A491-5ECD8BB0917C}</Project>
+      <Name>SSCRM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSTrans\SSTrans.csproj">
+      <Project>{AE7D3FAC-8F40-4925-A09B-99607691E49C}</Project>
+      <Name>SSTrans</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SSCRMAndrDB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\Screens\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

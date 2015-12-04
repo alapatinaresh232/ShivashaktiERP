@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://202.63.115.34/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://202.63.115.34/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://202.63.115.34/">
+      <s:element name="GetUserLogin_Proc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserLogin_ProcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserLogin_ProcResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchMaster_Proc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BranchMaster_ProcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BranchMaster_ProcResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CompanyMaster_Proc">
+        <s:complexType />
+      </s:element>
+      <s:element name="CompanyMaster_ProcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyMaster_ProcResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvProductSearchCursor_Get">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StateCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FinalYear" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InvProductSearchCursor_GetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvProductSearchCursor_GetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSCRM_SRV2MOB_MAPPING">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SSCRM_SRV2MOB_MAPPINGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SSCRM_SRV2MOB_MAPPINGResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUserLogin_ProcSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserLogin_Proc" />
+  </wsdl:message>
+  <wsdl:message name="GetUserLogin_ProcSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserLogin_ProcResponse" />
+  </wsdl:message>
+  <wsdl:message name="BranchMaster_ProcSoapIn">
+    <wsdl:part name="parameters" element="tns:BranchMaster_Proc" />
+  </wsdl:message>
+  <wsdl:message name="BranchMaster_ProcSoapOut">
+    <wsdl:part name="parameters" element="tns:BranchMaster_ProcResponse" />
+  </wsdl:message>
+  <wsdl:message name="CompanyMaster_ProcSoapIn">
+    <wsdl:part name="parameters" element="tns:CompanyMaster_Proc" />
+  </wsdl:message>
+  <wsdl:message name="CompanyMaster_ProcSoapOut">
+    <wsdl:part name="parameters" element="tns:CompanyMaster_ProcResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvProductSearchCursor_GetSoapIn">
+    <wsdl:part name="parameters" element="tns:InvProductSearchCursor_Get" />
+  </wsdl:message>
+  <wsdl:message name="InvProductSearchCursor_GetSoapOut">
+    <wsdl:part name="parameters" element="tns:InvProductSearchCursor_GetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SSCRM_SRV2MOB_MAPPINGSoapIn">
+    <wsdl:part name="parameters" element="tns:SSCRM_SRV2MOB_MAPPING" />
+  </wsdl:message>
+  <wsdl:message name="SSCRM_SRV2MOB_MAPPINGSoapOut">
+    <wsdl:part name="parameters" element="tns:SSCRM_SRV2MOB_MAPPINGResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SSCRMAndrDBSoap">
+    <wsdl:operation name="GetUserLogin_Proc">
+      <wsdl:input message="tns:GetUserLogin_ProcSoapIn" />
+      <wsdl:output message="tns:GetUserLogin_ProcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BranchMaster_Proc">
+      <wsdl:input message="tns:BranchMaster_ProcSoapIn" />
+      <wsdl:output message="tns:BranchMaster_ProcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyMaster_Proc">
+      <wsdl:input message="tns:CompanyMaster_ProcSoapIn" />
+      <wsdl:output message="tns:CompanyMaster_ProcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvProductSearchCursor_Get">
+      <wsdl:input message="tns:InvProductSearchCursor_GetSoapIn" />
+      <wsdl:output message="tns:InvProductSearchCursor_GetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SSCRM_SRV2MOB_MAPPING">
+      <wsdl:input message="tns:SSCRM_SRV2MOB_MAPPINGSoapIn" />
+      <wsdl:output message="tns:SSCRM_SRV2MOB_MAPPINGSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SSCRMAndrDBSoap" type="tns:SSCRMAndrDBSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserLogin_Proc">
+      <soap:operation soapAction="http://202.63.115.34/GetUserLogin_Proc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchMaster_Proc">
+      <soap:operation soapAction="http://202.63.115.34/BranchMaster_Proc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyMaster_Proc">
+      <soap:operation soapAction="http://202.63.115.34/CompanyMaster_Proc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvProductSearchCursor_Get">
+      <soap:operation soapAction="http://202.63.115.34/InvProductSearchCursor_Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSCRM_SRV2MOB_MAPPING">
+      <soap:operation soapAction="http://202.63.115.34/SSCRM_SRV2MOB_MAPPING" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SSCRMAndrDBSoap12" type="tns:SSCRMAndrDBSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserLogin_Proc">
+      <soap12:operation soapAction="http://202.63.115.34/GetUserLogin_Proc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BranchMaster_Proc">
+      <soap12:operation soapAction="http://202.63.115.34/BranchMaster_Proc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyMaster_Proc">
+      <soap12:operation soapAction="http://202.63.115.34/CompanyMaster_Proc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvProductSearchCursor_Get">
+      <soap12:operation soapAction="http://202.63.115.34/InvProductSearchCursor_Get" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSCRM_SRV2MOB_MAPPING">
+      <soap12:operation soapAction="http://202.63.115.34/SSCRM_SRV2MOB_MAPPING" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SSCRMAndrDB">
+    <wsdl:port name="SSCRMAndrDBSoap" binding="tns:SSCRMAndrDBSoap">
+      <soap:address location="http://202.63.115.34/SSCRMDB_Andr.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SSCRMAndrDBSoap12" binding="tns:SSCRMAndrDBSoap12">
+      <soap12:address location="http://202.63.115.34/SSCRMDB_Andr.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
